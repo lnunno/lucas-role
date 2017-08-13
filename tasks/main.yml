@@ -40,3 +40,16 @@
   git:
     repo: https://github.com/VundleVim/Vundle.vim.git
     dest: ~/.vim/bundle/Vundle.vim
+
+- name: Install Latex packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - texlive-base
+    - unzip
+    - texlive-binaries
+    - texlive-latex-recommended
+    - texlive-latex-extra
+    - kile
+  when: install_latex_packages

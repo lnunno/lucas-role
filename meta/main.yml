@@ -15,3 +15,7 @@ dependencies:
     become: yes
   - src: joshualund.golang
     become: yes
+  - src: geerlingguy.docker
+    docker_apt_release_channel: edge
+    docker_compose_version: "1.14.0"
+    become: yes

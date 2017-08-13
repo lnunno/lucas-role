@@ -1,2 +1,3 @@
 ---
 # defaults file for lucas-role
+install_latex_packages: no
